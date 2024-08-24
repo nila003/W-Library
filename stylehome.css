@@ -1,0 +1,67 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-image: url(/images/—Pngtree—library\ cartoon\ banner\ illustration_1065759.jpg);
+    background-size: cover;
+}
+.navbar-brand, .nav-link {
+    color: #030000 !important;
+    font-weight:400;
+    font-size: 20px;
+}
+.nav-link:hover {
+    color: #61b8ff !important;
+}
+.navbar{
+    animation: fadeInDown 1s ease-in-out;
+}
+.hero {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 80px;
+}
+
+.hero h2 {
+    font-size: 50px;
+    font-weight: bold;
+    animation: fadeInDown 1s ease-in-out;
+}
+
+.hero p {
+    font-size: 30px;
+    font-weight: 500;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.hero .btn{
+    animation: fadeInUp 1s ease-in;
+}
+/*animations*/
+
+@keyframes fadeInDown{
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeInUp{
+    from{
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

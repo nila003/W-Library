@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.navbar-brand, .nav-link {
+    color: #030000 ;
+    font-weight:400;
+    font-size: 20px;
+}
+.nav-link:hover {
+    color: #61b8ff !important;
+}
+.book-card img{
+    object-fit: cover;
+    height: 400px;
+}
+.book-card:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s;
+}
+.thumbnail,.book-card{
+    animation: fadeIn 1s ease-in;
+}
+.navbar{
+    animation: fadeInDown 1s ease-in-out;
+}
+@keyframes fadeInDown {
+    from{
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform:translateY(10%) ;
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
