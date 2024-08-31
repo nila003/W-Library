@@ -17,26 +17,44 @@ document.getElementById('signupForm').addEventListener('submit', function(event)
         document.getElementById('username').classList.remove('is-invalid');
     }
 
-    if (email.trim()=='' || !emailPattern.test(email)) {
-        event.preventDefault();
+    if (email.trim() === '') {
         document.getElementById('email').classList.add('is-invalid');
+        formValid = false;
     } else {
         document.getElementById('email').classList.remove('is-invalid');
     }
 
-    if (phone.trim()==''|| !phonePattern.test(phone)) {
-        event.preventDefault();
+    if (phone.trim() === '') {
         document.getElementById('num').classList.add('is-invalid');
+        formValid = false;
     } else {
         document.getElementById('num').classList.remove('is-invalid');
     }
 
-    // Validate the password
-    if (password.trim()==''|| !passwordPattern.test(password)) {
-        event.preventDefault();
+    if (password.trim() === '') {
         document.getElementById('pwd').classList.add('is-invalid');
+        formValid = false;
     } else {
         document.getElementById('pwd').classList.remove('is-invalid');
+    }
+
+    if (email.trim() !== '' && !emailregEx.test(email)) {
+        document.getElementById('email').classList.add('is-invalid');
+        formValid = false;
+    }
+
+    if (phone.trim() !== '' && !phoneregEx.test(phone)) {
+        document.getElementById('num').classList.add('is-invalid');
+        formValid = false;
+    }
+
+    if (password.trim() !== '' && !pwdregEx.test(password)) {
+        document.getElementById('pwd').classList.add('is-invalid');
+        formValid = false;
+    }
+
+    if (!formValid) {
+        event.preventDefault();
     }
 });
 
