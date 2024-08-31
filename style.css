@@ -36,6 +36,21 @@ body{
     float: right;
     text-decoration: none;
 }
+/*FormValidation*/
+.password-strength {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+}
+.strength-strong {
+    color: green;
+}
+.strength-medium {
+    color: orange;
+}
+.strength-poor {
+    color: red;
+}
 
 @keyframes fadeIn {
     from {
